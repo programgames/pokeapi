@@ -1792,6 +1792,7 @@ class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
     level = models.IntegerField()
     mastery = models.IntegerField(null=True, blank=True)
+    eventname = models.CharField(max_length=255, null=True, blank=True)
 
 
 class PokemonShape(HasName):

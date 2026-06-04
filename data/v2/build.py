@@ -2267,6 +2267,7 @@ def _build_pokemons():
             move_learn_method_id=int(info[3]),
             level=int(info[4]),
             order=int(info[5]) if info[5] != "" else None,
+            mastery=int(info[6]) if len(info) > 6 and info[6] != "" else None,
         )
 
     build_generic((PokemonMove,), "pokemon_moves.csv", csv_record_to_objects)
