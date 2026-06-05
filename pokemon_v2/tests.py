@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from rest_framework import status
 from rest_framework.test import APITestCase
 from pokemon_v2.models import *
@@ -730,7 +731,8 @@ class APIData:
                     sprites[generation][game] = None
                 else:
                     sprites[generation][game] = {
-                        "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png"
+                        "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png",
+                        "symbol_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/small/{type.id}.png",
                     }
 
         type_sprites = TypeSprites.objects.create(
@@ -1859,6 +1861,8 @@ class APIData:
         relative_physical_stats=0,
         needs_overworld_rain=False,
         turn_upside_down=False,
+        region=None,
+        base_form=None,
         needs_multiplayer=False,
         used_move=None,
         min_move_count=None,
@@ -1893,6 +1897,8 @@ class APIData:
             trade_species=trade_species,
             needs_overworld_rain=needs_overworld_rain,
             turn_upside_down=turn_upside_down,
+            region=region,
+            base_form=base_form,
             needs_multiplayer=needs_multiplayer,
             used_move=used_move,
             min_move_count=min_move_count,
@@ -3657,6 +3663,12 @@ class APITests(APIData, APITestCase):
                 self.assertEqual(
                     json.loads(response.data["sprites"])[generation][game]["name_icon"],
                     sprites_data[generation][game]["name_icon"],
+                )
+                self.assertEqual(
+                    json.loads(response.data["sprites"])[generation][game][
+                        "symbol_icon"
+                    ],
+                    sprites_data[generation][game]["symbol_icon"],
                 )
 
     # Pokedex Tests
@@ -5855,3 +5867,12 @@ class APITests(APIData, APITestCase):
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 
         self.assertEqual(lowercase_response.data, uppercase_response.data)
+
+    # Meta Tests
+    def test_meta_api(self):
+        response = self.client.get("{}/meta/".format(API_V2))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(datetime.fromtimestamp(int(response.data["deploy_date"])))
+        self.assertEqual(10, len(response.data["deploy_date"]))
+        self.assertEqual(40, len(response.data["hash"]))
+        self.assertIn("tag", response.data)

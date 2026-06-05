@@ -50408,8 +50408,8 @@ Once forgotten, this move can’t be remembered."
 虽然忘记之后就再也想不起来了，
 但还是建议忘记这个招式。"
 294,24,9,"The user stares at flashing lights to focus its mind, drastically raising its Sp. Atk stat."
-294,25,9,"The user stares at flashing lights to focus its mind, drastically boosting its Sp. Atk stat."
 294,25,9,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
+294,26,9,"The user stares at flashing lights to focus its mind, drastically boosting its Sp. Atk stat."
 295,5,9,"Attacks with a burst of
 light. May lower SP. DEF."
 295,6,9,"Attacks with a burst of
@@ -60390,8 +60390,8 @@ bundle of light blasts the target."
 353,20,12,"使用招式２回合后，
 会用无数道光束攻击对手。"
 353,24,9,"Two turns after this move is used, a concentrated bundle of light blasts the target."
-353,25,9,"Two turns after this move is used, a concentrated bundle of light blasts the target."
 353,25,9,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
+353,26,9,"Two turns after this move is used, a concentrated bundle of light blasts the target."
 354,5,9,"Allows a full-power attack,
 but sharply lowers SP. ATK."
 354,6,9,"Allows a full-power attack,
@@ -60585,7 +60585,7 @@ Once forgotten, this move can’t be remembered."
 但还是建议忘记这个招式。"
 354,24,9,The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat.
 354,25,9,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
-354,25,9,The user attacks the target with all its might. The recoil from this move harshly lowers the user's Sp. Atk stat.
+354,27,9,The user attacks the target with all its might. The recoil from this move harshly lowers the user's Sp. Atk stat.
 355,8,9,"The user lands and
 rests its body.
 It restores the
@@ -67082,7 +67082,7 @@ Once forgotten, this move can’t be remembered."
 但还是建议忘记这个招式。"
 391,24,9,The user employs its psychic power to switch stat changes with the target.
 391,25,9,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
-391,25,9,The user employs its psychic power to switch stat changes with the target.
+391,26,9,The user employs its psychic power to switch stat changes with the target.
 392,8,9,"The user envelops
 itself in a veil made
 of water. It regains
@@ -118028,112 +118028,227 @@ This also removes 3 PP from the target’s last move."
 减少３ＰＰ。"
 826,24,9,The user attacks with its tremendous psychic power. This also removes 3 PP from the target's last move.
 826,25,9,The user attacks with its tremendous psychic power. This also drains 3 PP from the move last used by the target.
+827,24,5,"Le lanceur attaque avec des griffes destructrices en visant les points faibles. La cible peut aussi être empoisonnée, paralysée, ou prise de somnolence."
 827,24,9,"The user lashes out at the target with ruinous claws, aiming to land a critical hit. This may also leave the target poisoned, paralyzed, or drowsy."
+827,25,5,"Le lanceur attaque avec des griffes destructrices en visant les points faibles. La cible peut aussi être empoisonnée, paralysée, ou endormie."
 827,25,9,"The user lashes out at the target with ruinous claws. This may also leave the target poisoned, paralyzed, or asleep."
+828,24,5,"Le lanceur s'enveloppe d'énergie psychique et frappe sa cible de plein fouet. Peut aussi augmenter la puissance défensive du lanceur."
 828,24,9,"Cloaking itself in psychic energy, the user slams into the target. This may also raise the user’s defensive stats."
+828,25,5,"Le lanceur s'enveloppe d'énergie psychique et frappe sa cible de plein fouet. Cela augmente également la Défense du lanceur."
 828,25,9,"Cloaking itself in psychic energy, the user slams into the target. This also boosts the user’s Defense stat."
+829,24,5,"Le lanceur échange sa puissance offensive avec sa puissance défensive."
+829,24,9,"The user swaps its offensive and defensive stats."
+829,25,5,"Le lanceur échange son Attaque avec sa Défense."
+829,25,9,"The user swaps its Attack and Defense stats."
+830,24,5,"Le lanceur attaque le point faible de sa cible avec sa hache de pierre. Les débris de pierre continuent d'infliger des dégâts à la cible plusieurs fois."
 830,24,9,"The user swings its stone axes at the target, aiming to land a critical hit. Stone splinters left behind by this attack continue to damage the target for several turns."
+830,25,5,"Le lanceur attaque le point faible de sa cible avec sa hache de pierre. Les débris de pierre se mettent alors à flotter autour de la cible."
 830,25,9,The user swings its stone axes at the target. Stone splinters left behind by this attack float around the target.
+831,24,5,"Le lanceur déclenche un violent typhon mêlé de haine et d'amour qui s'abat sur l'ennemi. Les effets additionnels changent en fonction de la forme du lanceur."
 831,24,9,The user attacks by wrapping the target in fierce winds brimming with love and hate. This move’s additional effects depend on the user’s form.
+831,25,5,"Le lanceur déclenche un violent typhon de haine et d'amour qui s'abat sur la cible. Peut baisser l'Attaque de celle-ci."
 831,25,9,The user attacks by wrapping opposing Pokémon in fierce winds brimming with love and hate. This may also lower their Attack stats.
+832,24,5,"Le lanceur utilise un pouvoir mystique pour se renforcer. S'il excelle en attaque, sa puissance offensive augmente. S'il excelle en défense, sa puissance défensive augmente."
 832,24,9,"The user strengthens itself with a mysterious power. If it excels in offense, its offensive stats are raised. If it excels in defense, its defensive stats are raised."
+832,25,5,"Le lanceur attaque en libérant un pouvoir mystique. Cela augmente également son Attaque Spéciale."
 832,25,9,The user attacks by emitting a mysterious power. This also boosts the user’s Sp. Atk stat.
+833,24,5,"Le lanceur attaque en déchaînant de violentes flammes, et devient obsédé par la capacité."
 833,24,9,"The user rampages and spews vicious flames to inflict damage on the target, then becomes fixated on using this move."
+833,25,5,"Le lanceur se déchaîne et attaque en projetant de violentes flammes pendant deux ou trois tours. Il devient ensuite confus."
 833,25,9,The user rampages around spewing flames for two to three turns. The user then becomes confused.
+834,24,5,"Le lanceur se recouvre entièrement d'eau avant de charger sa cible. Blesse aussi le lanceur, mais avance sa position dans l'ordre d'action."
 834,24,9,The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user and raises the user’s action speed.
+834,25,5,"Le lanceur se recouvre entièrement d'eau avant de charger sa cible. Cela blesse aussi gravement le lanceur."
 834,25,9,The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user quite a lot.
+835,24,5,"Le lanceur tire un concentré de chlorophylle sur l'ennemi. Blesse aussi le lanceur, et recule sa position dans l'ordre d'action."
 835,24,9,The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user and lowers the user's action speed.
+835,25,5,"Le lanceur tire un concentré de sa propre chlorophylle sur la cible, ce qui le blesse également."
 835,25,9,The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user.
+836,24,5,"Le lanceur envoie un bloc de glace de la taille d'un iceberg sur l'ennemi."
 836,24,9,The user hurls giant chunks of ice at the target to inflict damage.
+836,25,5,"Le lanceur envoie un bloc de glace de la taille d'un iceberg sur la cible, ce qui peut aussi l'apeurer."
 836,25,9,The user hurls giant chunks of ice at the target to inflict damage. This may also make the target flinch.
+837,24,5,"Le lanceur danse pour invoquer la victoire. Augmente la puissance offensive et la puissance défensive du lanceur et multiplie par 1,5 les dégâts des capacités."
 837,24,9,The user performs a dance to usher in victory. This raises the user’s offensive and defensive stats and increases the damage dealt by the user’s moves by 50 percent.
+837,25,5,"Le lanceur danse vigoureusement pour invoquer la victoire, ce qui augmente son Attaque, sa Défense et sa Vitesse."
 837,25,9,"The user performs an intense dance to usher in victory, boosting its Attack, Defense, and Speed stats."
+838,24,5,"Le lanceur charge l'ennemi de toutes ses forces. Baisse la puissance défensive du lanceur."
 838,24,9,The user smashes into the target in a full-body tackle. This also lowers the user’s defensive stats.
+838,25,5,"Le lanceur charge la cible de toutes ses forces, ce qui baisse la Défense et la Défense Spéciale du lanceur."
 838,25,9,The user smashes into the target in a full-body tackle. This also lowers the user’s Defense and Sp. Def stats.
+839,24,5,"Une multitude de pointes toxiques frappent l'ennemi et peuvent l'empoisonner. La puissance est doublée si la cible souffre d'une altération de statut."
 839,24,9,The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target has a status condition.
+839,25,5,"Une multitude de pointes toxiques frappent la cible et peuvent l'empoisonner. La puissance est doublée si celle-ci est déjà empoisonnée."
 839,25,9,The user launches countless toxic barbs to inflict damage. This may also poison the target. This move’s power is doubled if the target is already poisoned.
+840,24,5,"Le lanceur entaille l'ennemi avec ses ailes renforcées par une aura psychique. Taux de critiques élevé. Avance la position du lanceur dans l'ordre d'action."
 840,24,9,The user slashes the target with aura-enriched wings. This also raises the user's action speed. This move has a heightened chance of landing a critical hit.
+840,25,5,"Le lanceur entaille la cible avec ses ailes renforcées par une émanation psychique. Taux de critiques élevé. Cela augmente la Vitesse du lanceur."
 840,25,9,The user slashes the target with aura-enriched wings. This also boosts the user's Speed stat. This move has a heightened chance of landing a critical hit.
+841,24,5,"Une rancœur glaciale frappe l'ennemi. Peut aussi le geler. La puissance est doublée si la cible souffre d'une altération de statut."
 841,24,9,The user attacks its target with spine-chilling resentment. This may also leave the target with frostbite. This move's power is doubled if the target has a status condition.
+841,25,5,"Une rancœur glaciale frappe la cible et baisse son Attaque."
 841,25,9,The user attacks the target with spine-chilling resentment. This also lowers the target’s Attack stat.
+842,24,5,"Rend la peau du lanceur dure comme un mur de fer. Augmente sa puissance défensive. Les attaques de la cible deviennent plus faciles à esquiver."
 842,24,9,"The user makes its skin as hard as an iron shield, raising its defensive stats. Incoming moves also become more likely to miss."
+842,25,5,"Rend la peau du lanceur dure comme un mur de fer, ce qui augmente beaucoup sa Défense."
 842,25,9,"The user makes its skin as hard as an iron shield, sharply boosting its Defense stat."
+843,24,5,"Le lanceur frappe du talon et tire trois flèches simultanément. Augmente son taux de critiques. Baisse la puissance défensive de l'ennemi."
 843,24,9,"The user delivers an axe kick, then fires three arrows. This raises the chance of its future attacks landing critical hits and also lowers the target's defensive stats."
+843,25,5,"Le lanceur donne un coup de pied et tire trois flèches simultanément, ce qui peut baisser la Défense de la cible ou l'apeurer. Taux de critiques élevé."
 843,25,9,"The user kicks, then fires three arrows. This move has a heightened chance of landing a critical hit and may also lower the target’s Defense stat or make it flinch."
+844,24,5,"Une multitude de boules de feu frappent l'ennemi. Elles peuvent aussi le brûler. La puissance double si la cible souffre d'une altération de statut."
 844,24,9,The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition.
+844,25,5,"Une multitude de boules de feu frappent la cible, ce qui peut aussi la brûler. La puissance est doublée si celle-ci souffre d'une altération de statut."
 844,25,9,The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition.
+845,24,5,"Des lames de coquillages entaillent l'ennemi en visant ses points faibles. Les débris de coquillages disséminés infligent des dégâts à la cible à plusieurs reprises."
 845,24,9,"The user slashes its shell blade at the target, aiming to land a critical hit. Shell splinters left behind by this attack will continue to damage the target for several turns."
+845,25,5,"Des lames de coquillages entaillent la cible en visant ses points faibles. Les débris de coquillage se répandent sous la forme de picots aux pieds de la cible."
 845,25,9,The user slashes its shell blade at the target. Shell splinters left behind by this attack remain scattered under the target as spikes.
+846,24,5,"Frappe l'ennemi d'un typhon froid et brutal, qui fait trembler le cœur et le corps. Peut aussi geler la cible."
 846,24,9,The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also leave the target with frostbite.
+846,25,5,"Le lanceur déclenche un typhon froid et brutal qui fait trembler le cœur et le corps de la cible, ce qui peut aussi baisser sa Vitesse."
 846,25,9,The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also lower the Speed stats of opposing Pokémon.
+847,24,5,"Le lanceur déclenche un violent typhon orageux dont les rafales et la foudre frappent l'ennemi. Peut aussi paralyser la cible."
 847,24,9,The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave the target with paralysis.
+847,25,5,"Le lanceur déclenche un violent typhon orageux dont les rafales et la foudre frappent la cible, ce qui peut aussi la paralyser."
 847,25,9,The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave opposing Pokémon with paralysis.
+848,24,5,"Le lanceur déclenche un violent typhon mêlé à du sable ardent qui s'abat sur l'ennemi. Brûle la cible."
 848,24,9,The user attacks by wrapping the target in fierce winds and searingly hot sand. This also leaves the target with a burn.
+848,25,5,"Le lanceur déclenche un violent typhon mêlé à du sable ardent qui s'abat sur la cible, ce qui peut la brûler."
 848,25,9,The user attacks by wrapping opposing Pokémon in fierce winds and searingly hot sand. This may also leave them with a burn.
+849,24,5,"Le lanceur soigne ses altérations de statut et récupère des PV. Les attaques de la cible deviennent plus faciles à esquiver."
 849,24,9,The user heals its own status conditions and restores its HP. Incoming moves also become more likely to miss.
+849,25,5,"Le lanceur adresse une prière à la lune pour restaurer les PV et soigner ses altérations de statut ainsi que celles de ses alliés."
 849,25,9,"The user receives a blessing from the crescent moon, restoring HP and curing status conditions for itself and its ally Pokémon currently in the battle."
+850,24,5,"Le lanceur fait preuve de bravoure pour soigner ses altérations de statut et augmenter sa puissance offensive et défensive."
 850,24,9,"The user lifts its spirits, healing its own status conditions and raising its offensive and defensive stats."
+850,25,5,"Le lanceur fait preuve de bravoure pour soigner ses altérations de statut et augmenter son Attaque Spéciale ainsi que sa Défense Spéciale."
 850,25,9,"The user lifts its spirits, curing its own status conditions and boosting its Sp. Atk and Sp. Def stats."
+851,25,5,"Si le lanceur est Téracristallisé, il libère l'énergie de son Type Téracristal. Cette capacité inflige des dégâts en utilisant l'Attaque ou l'Attaque Spéciale du lanceur, selon la statistique la plus élevée."
 851,25,9,"If the user has Terastallized, it unleashes energy of its Tera Type. This move inflicts damage using the Attack or Sp. Atk stat—whichever is higher for the user."
+852,25,5,"Le lanceur déploie un piège de fil pour se protéger contre les attaques, et si un assaillant utilise une attaque directe contre lui, la Vitesse de l'assaillant baisse."
 852,25,9,"The user spins a silken trap, protecting itself from damage while lowering the Speed stat of any attacker that makes direct contact."
+853,25,5,"Le lanceur donne un coup de talon descendant à la cible, ce qui peut aussi la rendre confuse. S'il échoue, le lanceur se blesse."
 853,25,9,"The user attacks by kicking up into the air and slamming its heel down upon the target. This may also confuse the target. If it misses, the user takes damage instead."
+854,25,5,"Le lanceur attaque pour venger ses alliés. Plus le nombre de Pokémon alliés mis K.O. est élevé, plus la puissance de cette capacité augmente."
 854,25,9,"The user attacks to avenge its allies. The more defeated allies there are in the user's party, the greater the move's power."
+855,25,5,"Le lanceur attaque en émettant une étrange lumière qui ébranle l'esprit de la cible. Cela baisse beaucoup la Défense Spéciale de la cible."
 855,25,9,The user attacks by unleashing a peculiar light that even affects the mind. This also harshly lowers the target's Sp. Def stat.
+856,25,5,"Le lanceur attaque avec grâce et élégance. Si le lanceur a un Nigirigon dans sa bouche, cette capacité augmente une des statistiques du lanceur selon la forme du Nigirigon."
 856,25,9,"The user attacks with elegant poise. If the user has a Tatsugiri in its mouth, this move boosts one of the user's stats based on the Tatsugiri's form."
+857,25,5,"Le lanceur enveloppe son poing d'un torrent furieux et attaque si rapidement qu'on peine à le discerner. Frappe en priorité."
 857,25,9,The user summons a torrent around its fist and punches at blinding speed. This move always goes first.
+858,25,5,"Le lanceur relâche un concentré extrêmement pimenté sur la cible, ce qui augmente beaucoup l'Attaque de celle-ci, mais baisse aussi beaucoup sa Défense."
 858,25,9,"The user emits an incredibly spicy extract, sharply boosting the target's Attack stat and harshly lowering the target's Defense stat."
+859,25,5,"Le lanceur met tout son poids sur ses pattes et effectue de violentes rotations, ce qui inflige des dégâts à la cible, mais baisse beaucoup la Vitesse du lanceur."
 859,25,9,"The user spins furiously by straining its legs, inflicting damage on the target. This also harshly lowers the user's Speed stat."
+860,25,5,"Le lanceur et ses congénères prolifèrent en masse et attaquent ensemble d'une à dix fois d'affilée."
 860,25,9,The user’s fellows gather in droves to perform a combo attack that hits the target one to ten times in a row.
+861,25,5,"Le lanceur enveloppe ses jambes d'une fine couche de glace et heurte la cible en tournant sur lui-même. Ses rotations détruisent le champ actif sur le terrain."
 861,25,9,"The user covers its feet in thin ice and twirls around, slamming into the target. This move's spinning motion also destroys the terrain."
+862,25,5,"Le lanceur se jette dans une charge inconsciente sur la cible. Une fois cette capacité utilisée, toute attaque sur le lanceur inflige le double de dégâts et n'échoue jamais."
 862,25,9,"The user throws its entire body into a reckless charge. After this move is used, attacks on the user cannot miss and will inflict double damage until the user’s next turn."
+863,25,5,"Dans un élan de compassion, le lanceur adresse une prière afin de ranimer un Pokémon de l'équipe K.O. en lui rendant la moitié de ses PV."
 863,25,9,"The user bestows a loving blessing, reviving a party Pokémon that has fainted and restoring half that Pokémon's max HP."
+864,25,5,"Le lanceur couvre la cible de sel, ce qui lui inflige des dégâts à chaque tour. Si la cible est de type Acier ou Eau, ces dégâts sont plus élevés."
 864,25,9,"The user salt cures the target, inflicting damage every turn. Steel and Water types are more strongly affected by this move."
+865,25,5,"Le lanceur effectue des plongeons parfaitement cadencés pour éclabousser la cible et lui infliger des dégâts trois fois d'affilée."
 865,25,9,"The user performs a perfectly timed triple dive, hitting the target with splashes of water three times in a row."
+866,25,5,"Le lanceur attaque en tournant sur lui-même et empoisonne la cible. Il se libère également des effets de capacités comme Étreinte, Ligotage ou Vampigraine."
 866,25,9,"The user performs a spin attack that can also eliminate the effects of such moves as Bind, Wrap, and Leech Seed. This also poisons opposing Pokémon."
+867,25,5,"Le lanceur capture l'essence de la cible et la décalque. Le talent du lanceur et de ses alliés devient alors identique à celui de la cible."
 867,25,9,The user captures the very essence of the target in a sketch. This changes the Abilities of the user and its ally Pokémon to that of the target.
+868,25,5,"Le lanceur sacrifie des PV pour beaucoup augmenter son Attaque, son Attaque Spéciale, et sa Vitesse."
 868,25,9,"The user sharply boosts its Attack, Sp. Atk, and Speed stats by using its own HP."
+869,25,5,"Le lanceur se prosterne devant la cible et profite de cette distraction pour l'attaquer avec une lame. N'échoue jamais."
 869,25,9,The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses.
+870,25,5,"Le lanceur attaque en jetant un bouquet de fleurs piégé sur la cible. N'échoue jamais et inflige toujours un coup critique."
 870,25,9,The user throws a rigged bouquet of flowers at the target. This attack never misses and always lands a critical hit.
+871,25,5,"Le lanceur carbonise la cible en projetant sur elle de vives flammes créées par un chant. Cette capacité augmente l'Attaque Spéciale du lanceur."
 871,25,9,"The user blows out raging flames as if singing a song, scorching the target. This also boosts the user's Sp. Atk stat."
+872,25,5,"Le lanceur se joue de la cible et lui inflige des dégâts avec ses pas de danse gracieux et légers. Cette capacité augmente la Vitesse du lanceur."
 872,25,9,The user toys with the target and attacks it using light and fluid dance steps. This also boosts the user's Speed stat.
+873,25,5,"Le lanceur effectue un plaquage comme un taureau enragé. Le type de cette capacité dépend de la forme du lanceur. Peut aussi briser les barrières comme Mur Lumière et Protection."
 873,25,9,"The user performs a tackle like a raging bull. This move's type depends on the user's form. It can also break barriers, such as Light Screen and Reflect."
+874,25,5,"Le lanceur attaque en lançant de nombreuses pièces, ce qui baisse son Attaque Spéciale. Permet d'obtenir plus d'argent à la fin du combat."
 874,25,9,The user attacks by throwing out a mass of coins. This also lowers the user's Sp. Atk stat. Money is earned after the battle.
+875,25,5,"Le lanceur lacère la cible à l'aide d'une lame intangible. S'il se trouve dans un champ électrifié, la puissance de cette capacité augmente de 50 %."
 875,25,9,The user rends the target with an ethereal blade. This move's power is boosted by 50 percent if the user is on Electric Terrain.
+876,25,5,"Le lanceur asperge la cible avec un puissant jet d'eau bouillante. Quand le soleil brille, la puissance de cette capacité augmente de 50 % au lieu de baisser."
 876,25,9,The user blasts the target with boiling-hot water. This move's power is not lowered in harsh sunlight but rather boosted by 50 percent.
+877,25,5,"Le lanceur déclenche un cataclysme qui baisse les PV de la cible de moitié."
 877,25,9,The user summons a ruinous disaster. This cuts the target’s HP in half.
+878,25,5,"Le lanceur change de forme et s'écrase sur la cible dans une explosion antique. Si la capacité est super efficace, elle inflige encore plus de dégâts que d'ordinaire."
 878,25,9,"The user transforms and crashes to the ground, causing a massive prehistoric explosion. This move's power is boosted more than usual if it’s a supereffective hit."
+879,25,5,"Le lanceur change de forme et fonce sur la cible en la perforant d'électricité futuriste. Si la capacité est super efficace, sa puissance augmente encore plus."
 879,25,9,"The user races forward at ultrafast speeds, piercing its target with futuristic electricity. This move's power is boosted more than usual if it's a supereffective hit."
+880,25,5,"Le lanceur crée un clone en sacrifiant des PV, puis il revient et échange sa place avec un Pokémon de l'équipe prêt à combattre."
 880,25,9,The user creates a substitute for itself using its own HP before switching places with a party Pokémon in waiting.
+881,25,5,"Le lanceur fait un si mauvais jeu de mots qu'il jette un froid et échange sa place avec un Pokémon de l'équipe prêt à combattre. La neige tombe pendant cinq tours."
+881,25,9,"The user tells a chillingly bad joke before switching places with a party Pokémon in waiting. This summons a snowstorm lasting five turns."
+882,25,5,"Le lanceur fait le ménage sur le terrain, ce qui annule les effets de Picots, Piège de Roc, Toile Gluante, Pics Toxik, et Clonage. Augmente l'Attaque et la Vitesse du lanceur."
 882,25,9,"The user tidies up and removes the effects of Spikes, Stealth Rock, Sticky Web, Toxic Spikes, and Substitute. This also boosts the user’s Attack and Speed stats."
+883,25,5,"Le lanceur invoque une tempête de neige qui dure cinq tours, ce qui augmente la Défense des Pokémon de type Glace."
 883,25,9,The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types.
+884,25,5,"Le lanceur attaque en bondissant sur la cible, ce qui baisse la Vitesse de celle-ci."
 884,25,9,The user attacks by pouncing on the target. This also lowers the target's Speed stat.
+885,25,5,"Le lanceur surgit des hautes herbes pour attaquer la cible. Les mouvements agiles du lanceur augmentent sa Vitesse."
 885,25,9,The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.
+886,25,5,"Le lanceur attaque la cible en l'arrosant d'une eau si froide qu'elle détériore son esprit combatif. Baisse l'Attaque de la cible."
 886,25,9,The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.
+887,25,5,"Le lanceur fait tourner à toute vitesse la partie pointue de son corps afin de transpercer la cible. Ignore même les capacités comme Abri ou Détection."
 887,25,9,The user spins the pointed part of its body at high speed to pierce the target. This attack can hit a target using a move such as Protect or Detect.
+888,25,5,"Le lanceur projette d'étranges rayons lumineux avec ses yeux et inflige des dégâts deux fois d'affilée."
 888,25,9,The user shoots mystical beams from its eyes to inflict damage. The target is hit twice in a row.
+889,25,5,"Le lanceur transforme sa colère en énergie pour attaquer. Plus il a subi d'attaques, plus la puissance de cette capacité augmente."
 889,25,9,"The user converts its rage into energy to attack. The more times the user has been hit by attacks, the greater the move's power."
+890,25,5,"Le lanceur tire un boulet de canon ardent provenant de sa propre armure sur la cible. Cela baisse la Défense et la Défense Spéciale du lanceur."
 890,25,9,The user shoots its own armor out as blazing projectiles. This also lowers the user’s Defense and Sp. Def stats.
+891,25,5,"Le lanceur concentre son amertume du monde des vivants dans la pointe de ses épées et tranche la cible. La moitié des dégâts infligés sont convertis en PV pour le lanceur."
 891,25,9,The user focuses its bitter feelings toward the world of the living into a slashing attack. The user's HP is restored by up to half the damage taken by the target.
+892,25,5,"Le lanceur libère toute l'électricité contenue dans son corps pour infliger des dégâts élevés à la cible. Le lanceur perd le type Électrik."
 892,25,9,"The user discharges all the electricity from its body to perform a high-damage attack. After using this move, the user will no longer be Electric type."
+893,25,5,"Le lanceur met tout son corps à contribution pour attaquer la cible avec un immense marteau. Cette capacité ne peut pas être utilisée deux fois d'affilée."
 893,25,9,The user swings its whole body around to attack with its huge hammer. This move can't be used twice in a row.
+894,25,5,"Le lanceur contre-attaque avec un coup infligeant des dégâts supérieurs à ceux de la dernière capacité qui l'a blessé."
 894,25,9,The user retaliates with much greater force against the opponent that last inflicted damage on it.
+895,25,5,"Le lanceur projette de l'eau pressurisée qui entaille la cible comme une lame. Taux de critiques élevé."
 895,25,9,The user expels pressurized water to cut at the target like a blade. This move has a heightened chance of landing a critical hit.
+901,25,5,"Le lanceur concentre toute son énergie dans la lune rouge sang sur son front et la projette sur la cible. Cette capacité ne peut pas être utilisée deux fois d'affilée."
 901,25,9,The user unleashes the full brunt of its spirit from a full moon that shines as red as blood. This move can't be used twice in a row.
+902,25,5,"Le lanceur remue son thé et en bombarde la cible. La moitié des dégâts infligés sont convertis en PV pour le lanceur. Cette capacité peut aussi brûler la cible."
 902,25,9,The user fires a blast of tea that it mixed. The user's HP is restored by up to half the damage taken by the target. This may also leave the target with a burn.
+903,25,5,"Le lanceur jette une bombe qui recouvre la cible de sirop gluant et fait progressivement baisser la Vitesse de la cible pendant trois tours."
 903,25,9,"The user sets off an explosion of sticky candy syrup, which coats the target and causes the target's Speed stat to drop each turn for three turns."
+904,25,5,"Le lanceur frappe avec un gourdin enveloppé de lierre. Le type de cette capacité change selon le masque porté par le lanceur, et a un taux de critiques élevé."
 904,25,9,"The user strikes with an ivy-wrapped cudgel. This move's type changes depending on the mask worn by the user, and it has a heightened chance of landing a critical hit."
+905,25,5,"Le lanceur absorbe de l'électricité au premier tour, ce qui augmente son Attaque Spéciale, et envoie une puissante décharge au second. S'il pleut, il l'envoie au premier tour."
 905,25,9,"The user gathers electricity on the first turn, boosting its Sp. Atk stat, then fires a high-voltage shot on the next turn. The shot will be fired immediately in rain."
+906,25,5,"Le lanceur bombarde la cible afin de l'éliminer grâce au pouvoir des cristaux. Si le lanceur est Terapagos sous sa Forme Stellaire, la capacité touche tous les ennemis."
 906,25,9,"With the power of its crystals, the user bombards and eliminates the target. When used by Terapagos in its Stellar Form, this move damages all opposing Pokémon."
+907,25,5,"Le lanceur attaque en tirant un rayon lumineux. Il arrive parfois que toutes les têtes agissent ensemble, ce qui double la puissance de la capacité."
 907,25,9,"The user shoots a beam of light to inflict damage. Sometimes all the user's heads shoot beams in unison, doubling the move's power."
+908,25,5,"Le lanceur se protège contre les attaques grâce à son pelage incandescent, et si un assaillant utilise une attaque directe contre lui, il le brûle."
 908,25,9,The user's intensely hot fur protects it from attacks and also burns any attacker that makes direct contact with it.
+909,25,5,"Permet au lanceur d'attaquer la cible en priorité avec une décharge électrique. Échoue si la cible ne prépare pas une attaque."
 909,25,9,This move enables the user to attack first with a jolt of electricity. This move fails if the target is not readying an attack.
+910,25,5,"Le lanceur pourfend la cible avec la lumière accumulée sur sa tête. Cette attaque passe outre les protections."
 910,25,9,The user wields the light that has accumulated atop its head to cleave the target. This move hits even if the target protects itself.
+911,25,5,"Le lanceur concentre des particules élémentaires pour créer une lame qui inflige des dégâts à la cible deux fois d'affilée. N'échoue jamais."
 911,25,9,The user attacks by launching particle blades at the target twice in a row. This attack never misses.
+912,25,5,"Le lanceur écrase la cible avec ses bras ou ses pinces. Plus il reste de PV à la cible, plus la puissance de la capacité augmente."
 912,25,9,"The target is crushed with an arm, a claw, or the like to inflict damage. The more HP the target has left, the greater the move's power."
+913,25,5,"Le lanceur galvanise ses alliés avec un encouragement draconique qui augmente leur taux de critiques. L'effet est plus puissant si les alliés ont le type Dragon."
 913,25,9,The user raises its allies’ morale with a draconic cry so that their future attacks have a heightened chance of landing critical hits. This rouses Dragon types more.
+914,25,5,"Le lanceur attaque la cible avec sa voix angélique. Cette capacité rend la cible confuse si ses stats ont augmenté pendant ce tour."
 914,25,9,The user attacks the target using its angelic voice. This also confuses the target if its stats have been boosted during the turn.
+915,25,5,"Le lanceur utilise la force de son dépit pour attaquer. S'il a utilisé une capacité qui a échoué au tour précédent, la puissance d'Indignition est doublée."
 915,25,9,"Spurred by desperation, the user attacks the target. This move's power is doubled if the user's previous move failed."
+916,25,5,"Le lanceur se charge en électricité et fond sur la cible. S'il échoue, le lanceur se blesse."
 916,25,9,"The user electrifies its body and drops onto the target to inflict damage. If this move misses, the user takes damage instead."
+917,25,5,"Le lanceur attaque avec des ondes sonores dissonantes. Cela empêche la cible de récupérer des PV à l'aide de capacités, talents ou objets tenus pendant 2 tours."
 917,25,9,"The user attacks the target with unpleasant sound waves. For two turns, the target is prevented from recovering HP through moves, Abilities, or held items."
+918,25,5,"Le lanceur réagit instinctivement au moindre mouvement et donne un coup de paume qui apeure la cible. Échoue si cette dernière n'a pas utilisé une attaque prioritaire."
 918,25,9,"The user reacts to the target's movement and strikes with the heel of its palm, making the target flinch. This move fails if the target is not readying a priority move."
+919,25,5,"Le lanceur ligote la cible avec une chaîne faite de poison et lui injecte un venin corrosif, ce qui peut aussi gravement l'empoisonner."
 919,25,9,"The user pours toxins into the target by wrapping them in a toxic, corrosive chain. This may also leave the target badly poisoned."
