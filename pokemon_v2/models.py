@@ -1793,6 +1793,7 @@ class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasO
     level = models.IntegerField()
     mastery = models.IntegerField(null=True, blank=True)
     eventname = models.CharField(max_length=255, null=True, blank=True)
+    reminder_only = models.BooleanField(null=True, blank=True, default=None)
 
 
 class PokemonShape(HasName):
