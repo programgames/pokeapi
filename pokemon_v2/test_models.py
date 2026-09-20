@@ -1,18 +1,95 @@
 import csv
 import os
 import re
+
 from django.conf import settings
 from django.test import TestCase
+from typing_extensions import override
+
 from pokemon_v2.models import *
 
 
 class AbilityTestCase(TestCase):
+    @override
     def setUp(self):
         Ability.objects.create(name="Smell", generation_id=3, is_main_series=True)
 
     def fields_are_valid(self):
         smell = Ability.objects.get(name="Smell")
-        self.assertEqual(smell.generation_id, 3)
+        assert smell.generation is not None
+        self.assertEqual(smell.generation.pk, 3)
+
+
+class EncounterPokemonDetailTestCase(TestCase):
+    def test_unique_encounter_pokemon_details(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        with open(os.path.join(csv_dir, "encounter_pokemon_details.csv")) as infile:
+            reader = csv.DictReader(infile)
+            encounter_ids = []
+            duplicate_ids = []
+            for row in reader:
+                if row["encounter_id"] in encounter_ids:
+                    duplicate_ids.append(row["encounter_id"])
+                else:
+                    encounter_ids.append(row["encounter_id"])
+
+            if duplicate_ids:
+                self.fail(f"Duplicate encounter ID(s) found in encounter_pokemon_details.csv: {duplicate_ids}")
+
+
+class EvolutionCSVDataIntegrityTestCase(TestCase):
+    """Test data integrity of new evolution foreign keys and evolution variables."""
+
+    def test_required_and_evolved_pokemon_form_foreign_keys(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        forms_path = os.path.join(csv_dir, "pokemon_forms.csv")
+        with open(forms_path, encoding="utf-8") as f:
+            valid_form_ids = {row["id"] for row in csv.DictReader(f)}
+
+        evo_path = os.path.join(csv_dir, "pokemon_evolution.csv")
+        with open(evo_path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                required_pokemon_form_id = row.get("required_pokemon_form_id", "").strip()
+                evolved_pokemon_form_id = row.get("evolved_pokemon_form_id", "").strip()
+                if required_pokemon_form_id:
+                    self.assertIn(
+                        required_pokemon_form_id,
+                        valid_form_ids,
+                        f"Row {row['id']}: '{required_pokemon_form_id=}' doesn't exist in pokemon_forms.csv",
+                    )
+                if evolved_pokemon_form_id:
+                    self.assertIn(
+                        evolved_pokemon_form_id,
+                        valid_form_ids,
+                        f"Row {row['id']}: '{evolved_pokemon_form_id=}' doesn't exist in pokemon_forms.csv",
+                    )
+
+    def test_evolution_triggers_foreign_keys(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        triggers_path = os.path.join(csv_dir, "evolution_triggers.csv")
+        with open(triggers_path, encoding="utf-8") as f:
+            valid_trigger_ids = {row["id"] for row in csv.DictReader(f)}
+
+        evo_path = os.path.join(csv_dir, "pokemon_evolution.csv")
+        with open(evo_path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                trigger_id = row.get("evolution_trigger_id", "").strip()
+                if trigger_id:
+                    self.assertIn(
+                        trigger_id,
+                        valid_trigger_ids,
+                        f"Row {row['id']}: evolution_trigger_id '{trigger_id}' doesn't exist in evolution_triggers.csv",
+                    )
+
+    def test_evolution_variables_integrity(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        var_path = os.path.join(csv_dir, "evolution_variables.csv")
+        with open(var_path, encoding="utf-8") as f:
+            var_rows = list(csv.DictReader(f))
+            self.assertTrue(len(var_rows) >= 2, "Expected at least 2 evolution variables (EC, PID)")
+            symbols = {r["symbol"] for r in var_rows}
+            self.assertIn("EC", symbols)
+            self.assertIn("PID", symbols)
 
 
 class CSVResourceNameValidationTestCase(TestCase):
@@ -53,10 +130,10 @@ class CSVResourceNameValidationTestCase(TestCase):
             csv_path = os.path.join(csv_dir, filename)
 
             try:
-                with open(csv_path, "r", encoding="utf-8") as csvfile:
+                with open(csv_path, encoding="utf-8") as csvfile:
                     reader = csv.DictReader(csvfile)
 
-                    if "identifier" not in reader.fieldnames:
+                    if "identifier" not in (reader.fieldnames or []):
                         continue
 
                     for row_num, row in enumerate(reader, start=2):
@@ -77,13 +154,13 @@ class CSVResourceNameValidationTestCase(TestCase):
                                 }
                             )
 
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001
                 violations.append(
                     {
                         "file": filename,
                         "row": "N/A",
                         "id": "N/A",
-                        "identifier": f"Error reading file: {str(e)}",
+                        "identifier": f"Error reading file: {e!s}",
                     }
                 )
 
@@ -91,32 +168,27 @@ class CSVResourceNameValidationTestCase(TestCase):
 
         # Report violations
         if violations:
-            error_lines.append(
-                "\n\nFound {} resource(s) with invalid identifiers (not ASCII slugs):".format(
-                    len(violations)
+            error_lines.extend(
+                (
+                    f"\n\nFound {len(violations)} resource(s) with invalid identifiers (not ASCII slugs):",
+                    "\nIdentifiers must match pattern: ^[a-z0-9-]+$",
+                    "\nInvalid identifiers found in CSV files:",
                 )
             )
-            error_lines.append("\nIdentifiers must match pattern: ^[a-z0-9-]+$")
-            error_lines.append("\nInvalid identifiers found in CSV files:")
 
-            for v in violations:
-                error_lines.append(
-                    "  - {file} (row {row}, id={id}): {identifier}".format(**v)
+            error_lines.extend("  - {file} (row {row}, id={id}): {identifier}".format(**v) for v in violations)
+
+            error_lines.extend(
+                (
+                    "\nThese identifiers contain invalid characters and must be normalized.",
+                    "Update the CSV files in data/v2/csv/ to fix these identifiers.",
+                    "\nSuggested fixes:",
+                    "  - Remove Unicode apostrophes (') and replace with regular hyphens or remove",
+                    "  - Remove Unicode letters (ñ → n)",
+                    "  - Remove parentheses and other special characters",
+                    "  - Convert to lowercase",
                 )
-
-            error_lines.append(
-                "\nThese identifiers contain invalid characters and must be normalized."
             )
-            error_lines.append(
-                "Update the CSV files in data/v2/csv/ to fix these identifiers."
-            )
-            error_lines.append("\nSuggested fixes:")
-            error_lines.append(
-                "  - Remove Unicode apostrophes (') and replace with regular hyphens or remove"
-            )
-            error_lines.append("  - Remove Unicode letters (ñ → n)")
-            error_lines.append("  - Remove parentheses and other special characters")
-            error_lines.append("  - Convert to lowercase")
 
             self.fail("\n".join(error_lines))
 

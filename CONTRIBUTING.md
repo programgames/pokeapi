@@ -18,6 +18,17 @@ git checkout -b my_new_branch
 ```
 - Write some code, fix something, and add a test to prove that it works. **No pull request will be accepted without tests passing, or without new tests if new features are added.**
 
+- Make sure your code changes passes the pre-commit hooks, linting, formatting, and typechecking. You can run them manually with:
+```bash
+make pre-commit   # or: uv run pre-commit run --all-files
+make lint-check   # or: uv run ruff check .
+make format       # or: uv run ruff format .
+make typecheck    # or: uv run ty check
+```
+
+> [!NOTE]
+> As of right now we are not strictly enforcing linting and typechecking, but we will be in the future. Please try to make sure your code passes these checks.
+
 - Commit your code and push it to GitHub
 
 - [Open a new pull request](https://help.github.com/articles/creating-a-pull-request/) and describe the changes you have made.

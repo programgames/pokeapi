@@ -74,6 +74,13 @@ array_relationships:
         table:
           name: pokemon_v2_pokemonsprites
           schema: public
+  - name: pokemonstatpasts
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonstatpast
+          schema: public
   - name: pokemonstats
     using:
       foreign_key_constraint_on:

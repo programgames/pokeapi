@@ -17,7 +17,7 @@
 - [`master`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
 - [`staging`](https://github.com/PokeAPI/pokeapi/blob/staging/Resources/docker/app/Dockerfile)
 
-> `pokeapi` uses `python:3.13.7-alpine` as base image.
+> `pokeapi` uses `python:3.14-alpine` as base image.
 
 ## What is PokeAPI?
 
@@ -46,6 +46,6 @@ Pokémon data isn't automatically present in this image. All Pokémon data is pe
 When the container is up and running, run the following shell commands:
 
 ```sh
-docker exec pokeapi python manage.py migrate --settings=config.docker-compose
-docker exec pokeapi sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+docker exec pokeapi python manage.py migrate --settings=config.docker_compose
+docker exec pokeapi sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker_compose'
 ```
